@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Hjem</a></li>
+          <li><a href="#">Prosjekter</a></li>
+          <li><a href="#">Om meg</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><button onclick="toggleVisible()">create new project</button></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="overlay"></div>
+    <main id="mainSection">
+    <div id="app"></div>
+    <section id="projectSection">
+    <form id="projectCreation" style="display: none;">
+      <button type="button" id="closeForm" class="close-btn">X</button>
+      <input type="text" id="projectName" placeholder="Name Of The Project" required/>
+      <textarea id="projectDescription" placeholder="Description of the project" required></textarea>
+      <input type="date" id="startDateProject" required/>
+      <input type="date" id="endDateProject" required/>
+      <input type="text" id="projectImage" placeholder="imageLink"/>
+      <button type="submit">Create project</button>
+    </form>
+  </section>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  
+  </body>
+</html>
